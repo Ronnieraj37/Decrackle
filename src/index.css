@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    background-color: #111111;
+    height:100%
+}
+
+.borderDash{
+    background-image: url('./icons/borderdashed.svg');
+    background-repeat: no-repeat;
+}
+
+.block {
+   width: 60%;
+   height: 61%;
+   /* dashed border */
+   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+.row-full{
+     width: 100vw;
+     height: 100vw;
+     margin-left: -50vw;
+     left: 50%;
+}
