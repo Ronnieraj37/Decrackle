@@ -8,7 +8,7 @@ const Home = ({selected, setselected}) => {
   const navigate = useNavigate();
   
   return (
-    <div className=" text-white w-1/6 min-h-screen  border-r-[1px] border-opacity-30 border-white bg-[#1e1e1e]">
+    <div className="text-white w-1/6 h-screen border-r-[1px] border-opacity-30 border-white bg-[#1e1e1e]">
       <div className=' justify-around h-4/5 flex flex-col'>
         <div className='flex justify-center px-3 py-2  items-center  '>
           <div className='scale-110 mx-2'>
@@ -49,11 +49,11 @@ const Home = ({selected, setselected}) => {
         <LuWand2 className='mx-2' size={30}/>
         <p>Speech Enhancement</p>
         </button>
-        <button onClick={()=>{setselected(3);navigate("/")}} className={`flex px-3 py-2  border-l-4 items-center ${selected===3 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
+        <button onClick={()=>{setselected(3);navigate("/transcription")}} className={`flex px-3 py-2  border-l-4 items-center ${selected===3 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
         <CgTranscript  className='mx-2' size={33}/>
         <p>Transcription</p>
         </button>
-        <button onClick={()=>{setselected(4);navigate("/")}} className={`flex px-3 py-2  border-l-4 items-center ${selected===4 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
+        <button onClick={()=>{setselected(4);navigate("/music")}} className={`flex px-3 py-2  border-l-4 items-center ${selected===4 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
         <div className='scale-95 '>
         <svg width="44" height="51" viewBox="0 0 44 51" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path opacity="0.2" d="M40.8457 9.625V16.625H33.8457L40.8457 9.625Z" fill="#F4F4F4"/>
@@ -66,7 +66,7 @@ const Home = ({selected, setselected}) => {
         </div>
         <p>Music Extraction</p>
         </button>
-        <button onClick={()=>{setselected(5);navigate("/")}} className={`flex px-3 py-2  border-l-4 items-center ${selected===5 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
+        <button onClick={()=>{setselected(5);navigate("/folders")}} className={`flex px-3 py-2  border-l-4 items-center ${selected===5 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
         <VscFolderOpened  className='mx-2' size={33}/>
         <p>Folders</p>
         </button>

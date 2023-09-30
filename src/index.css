@@ -11,6 +11,29 @@ body{
 .borderDash{
     background-image: url('./icons/borderdashed.svg');
     background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.feedbackDash{
+    background-image: url('./icons/feedbackDash.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.borderTrans{
+    background-image: url('./icons/borderTrans.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.borderFull{
+    background-image: url('./icons/borderFull.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
 }
 
 .block {

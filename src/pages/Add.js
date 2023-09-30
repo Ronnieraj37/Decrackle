@@ -3,16 +3,17 @@ import {LiaFileUploadSolid} from "react-icons/lia";
 import {BsDot} from "react-icons/bs";
 import {FiUpload} from "react-icons/fi"
 import Upload from '../components/Upload';
+import Footer from '../components/Footer';
 const Add = ({setfile,setselected}) => {
   const [modal, setmodal] = useState(false);
   useEffect(()=>{
-    // setselected(1);
+    setselected(1);
   },[])
   return (
-    <div className='flex h-full items-center justify-center'>
-      <div className='h-4/5  w-3/5'>
-      <div className='h-full w-full borderDash flex items-center justify-around  rounded-2xl '>
-        <div className='h-2/3  flex flex-col items-center justify-around '>
+    <div className='flex flex-col  h-[90%] items-center justify-center'>
+      <div className='h-[90%]  w-3/5'>
+      <div className='h-full w-full min-w-[641.6px] min-h-[420.91px] borderDash bg-black flex items-center justify-around  rounded-2xl '>
+        <div className='h-1/2 flex flex-col items-center justify-around '>
         <LiaFileUploadSolid className='scale-125 rounded-full' size={50}/>
       {modal && <Upload setfile={setfile} setmodal={setmodal} /> } 
         <div className='flex flex-col items-center'>
@@ -29,6 +30,9 @@ const Add = ({setfile,setselected}) => {
         </div>
         </div>
       </div>
+      </div>
+      <div className='h-[10%] w-full'>
+        <Footer />
       </div>
     </div>
   )
