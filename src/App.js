@@ -12,6 +12,8 @@ import Music from "./pages/Music";
 import Folders from "./pages/Folders";
 import Feedback from "./pages/Feedback";
 import FAQ from "./userPage/FAQ";
+import Support from "./pages/Support";
+import Login from "./pages/Login";
 function App() {
   const [file, setfile] = useState(null);
   const [selected, setselected] = useState(1);
@@ -28,8 +30,10 @@ function App() {
         {file && <Route path="/music" element={<Music setselected={setselected} file={file} setfile={setfile} />}/>}
         <Route path="/folders" element={<Folders />} />
         <Route path="/feedback" element={<Feedback />}/>
+        <Route path="/support" element={<Support />}/>
         <Route path="/how-to-use" element={<HTW/>}/>
         <Route path="/faq" element={<FAQ />}/>
+        <Route path="/login" element={<Login />}/>
         <Route path="/folders/:folderid" element={<FolderFiles />} />
         <Route path="*" element={<Add  setselected={setselected} setfile={setfile} />}/>
       </Routes>
