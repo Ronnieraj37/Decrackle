@@ -39,7 +39,7 @@ const Login = () => {
             </div>
             <div className='flex w-4/6  items-center justify-center '>
             <p>Already a User?</p>
-            <button className='underline text-[#98d12f] rounded-3xl px-5 py-2'>Sign In</button>
+            <button onClick={()=>{setnewUser(false)}} className='underline text-[#98d12f] rounded-3xl px-5 py-2'>Sign In</button>
             </div>
             </div>
         </div>

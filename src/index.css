@@ -15,11 +15,20 @@ body{
     background-position: center center;
 }
 
+.borderRotated{
+    background-image: url('./icons/borderdashed.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: absolute; 
+    transform: rotate(90deg);
+}
 .feedbackDash{
     background-image: url('./icons/feedbackDash.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    
 }
 
 .borderTrans{

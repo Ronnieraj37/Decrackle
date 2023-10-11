@@ -11,22 +11,22 @@ const Transcription = ({setselected,file,setfile}) => {
         setselected(3);
     })
   return (
-    <div className='flex flex-col h-[90%] items-center justify-center'>
+    <div className='flex flex-col overflow-auto h-[90%] w-full items-center justify-center'>
         {transcipted ? 
         <div className='w-full h-full  items-center justify-center  flex'>
             {
                 downloadModal ?
                 <FolderSelect setdownloadModal={setdownloadModal} />
                 :
-                <div className='flex flex-col items-center w-full h-full'>
-                <div className='h-[3%] flex justify-center w-full'>
-                <div className='flex  items-center w-4/6  -mt-6 justify-between'>
-                    <p className='text-3xl text-[#baef57]'>File Name</p>
+                <div className='flex flex-col justify-center items-center w-full h-full'>
+                <div className=' h-[10%] sm:h-[3%] flex justify-center w-full'>
+                <div className='flex  items-center w-5/6 sm:w-4/6 my-2 justify-between'>
+                    <p className='text-xl sm:text-2xl md:text-3xl text-[#baef57]'>File Name</p>
                     <p className='font-extralight'>Last Edit 2023-07-16 06:25 PM </p>
                 </div>
                 </div>
-                <div className='h-[70%] min-h-[580px] borderDash w-4/5'>
-                <div className='h-full w-full  flex items-center justify-around  rounded-2xl '>
+                <div className='h-[63%] sm:h-[70%] my-2 border-white border-dashed rounded-3xl border-[1px] w-[84%] sm:w-[60%]'>
+                <div className='h-full w-full md:scale-100 scale-90 flex items-center justify-around  rounded-2xl '>
                     <div className='h-[90%] w-full flex flex-col items-center justify-around '>
                     <p>Transcription Generation Complete !</p>
                     <svg width="44" height="53" viewBox="0 0 44 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,13 +48,13 @@ const Transcription = ({setselected,file,setfile}) => {
                     </button>
                     }
                     </div>
-                    <div className='h-[30%] p-4 overflow-y-auto w-[70%] rounded-lg bg-[#1e1e1e]'>
+                    <div className='h-[30%] p-4 overflow-y-auto w-[90%] rounded-lg bg-[#1e1e1e]'>
                         <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis imperdiet massa tincidunt nunc pulvinar sapien et. Posuere ac ut consequat semper viverra nam. Quam viverra orci sagittis eu volutpat odio facilisis mauris sit. Volutpat est velit egestas dui. Elit at imperdiet dui accumsan sit amet nulla. Ut tortor pretium viverra suspendisse. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Viverra ipsum nunc aliquet bibendum enim facilisis. Nunc id cursus metus aliquam. At risus viverra adipiscing at in tellus integer. Posuere urna nec tincidunt praesent semper feugiat nibh sed. Urna condimentum mattis pellentesque id nibh tortor. Vel pharetra vel turpis nunc eget lorem dolor.
                         </p>
                     </div>
                     <div className='flex flex-col items-center'>
-                    <button onClick={()=>{setdownloadModal(true)}} className='flex px-24 py-2 items-center rounded-3xl bg-[#a3db3c]'>
+                    <button onClick={()=>{setdownloadModal(true)}} className='flex sm:px-12 px-6 md:px-24 py-2 items-center rounded-3xl bg-[#a3db3c]'>
                         <p className='my-1 mx-1 text-black '>Download the File </p>
                         <svg width="17" className='mx-1' height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.25 0.375H1.75C1.45163 0.375 1.16548 0.493526 0.954505 0.704505C0.743526 0.915483 0.625 1.20163 0.625 1.5V10.5C0.625 10.7984 0.743526 11.0845 0.954505 11.2955C1.16548 11.5065 1.45163 11.625 1.75 11.625H15.25C15.5484 11.625 15.8345 11.5065 16.0455 11.2955C16.2565 11.0845 16.375 10.7984 16.375 10.5V1.5C16.375 1.20163 16.2565 0.915483 16.0455 0.704505C15.8345 0.493526 15.5484 0.375 15.25 0.375ZM15.25 10.5H1.75V1.5H15.25V10.5ZM2.875 6.5625C2.875 6.41332 2.93426 6.27024 3.03975 6.16475C3.14524 6.05926 3.28832 6 3.4375 6H4.5625C4.71168 6 4.85476 6.05926 4.96025 6.16475C5.06574 6.27024 5.125 6.41332 5.125 6.5625C5.125 6.71168 5.06574 6.85476 4.96025 6.96025C4.85476 7.06574 4.71168 7.125 4.5625 7.125H3.4375C3.28832 7.125 3.14524 7.06574 3.03975 6.96025C2.93426 6.85476 2.875 6.71168 2.875 6.5625ZM14.125 6.5625C14.125 6.71168 14.0657 6.85476 13.9602 6.96025C13.8548 7.06574 13.7117 7.125 13.5625 7.125H6.8125C6.66332 7.125 6.52024 7.06574 6.41475 6.96025C6.30926 6.85476 6.25 6.71168 6.25 6.5625C6.25 6.41332 6.30926 6.27024 6.41475 6.16475C6.52024 6.05926 6.66332 6 6.8125 6H13.5625C13.7117 6 13.8548 6.05926 13.9602 6.16475C14.0657 6.27024 14.125 6.41332 14.125 6.5625ZM10.75 8.8125C10.75 8.96168 10.6907 9.10476 10.5852 9.21025C10.4798 9.31574 10.3367 9.375 10.1875 9.375H3.4375C3.28832 9.375 3.14524 9.31574 3.03975 9.21025C2.93426 9.10476 2.875 8.96168 2.875 8.8125C2.875 8.66332 2.93426 8.52024 3.03975 8.41475C3.14524 8.30926 3.28832 8.25 3.4375 8.25H10.1875C10.3367 8.25 10.4798 8.30926 10.5852 8.41475C10.6907 8.52024 10.75 8.66332 10.75 8.8125ZM14.125 8.8125C14.125 8.96168 14.0657 9.10476 13.9602 9.21025C13.8548 9.31574 13.7117 9.375 13.5625 9.375H12.4375C12.2883 9.375 12.1452 9.31574 12.0398 9.21025C11.9343 9.10476 11.875 8.96168 11.875 8.8125C11.875 8.66332 11.9343 8.52024 12.0398 8.41475C12.1452 8.30926 12.2883 8.25 12.4375 8.25H13.5625C13.7117 8.25 13.8548 8.30926 13.9602 8.41475C14.0657 8.52024 14.125 8.66332 14.125 8.8125Z" fill="#111111"/>
@@ -65,22 +65,24 @@ const Transcription = ({setselected,file,setfile}) => {
                     </div>
                 </div>
                 </div>
-                <div className='h-[27%] flex justify-center items-center w-full'>
-                <div className='flex flex-col items-start w-4/6 justify-start'>
-                    <div className='flex font-light mb-1 mt-2'>
+                <div className='h-[27%] flex  justify-center items-center w-full'>
+                <div className='flex flex-col md:items-start items-center w-full md:w-4/6 justify-start'>
+                    <div className='flex lg:flex-col flex-row'>
+                    <div className='flex flex-col lg:flex-row font-light mb-1 mt-2'>
                     <div className='flex mx-2'>Type:  <p className='font-semibold mx-2'> Audio </p> </div>
                     <div className='flex mx-2'>Codec:  <p className='font-semibold mx-2'> mp3/wav </p> </div>
                     <div className='flex mx-2'>Duration:  <p className='font-semibold mx-2'> 54 sec </p> </div>
                     <div className='flex mx-2'>Bit rate:  <p className='font-semibold mx-2'> 24kb/sec </p> </div>
                     </div>
-                    <div className='flex font-light my-1'>
+                    <div className='flex flex-col lg:flex-row font-light my-1'>
                     <div className='flex mx-2'>Type:  <p className='font-semibold mx-2'> Audio </p> </div>
                     <div className='flex mx-2'>Codec:  <p className='font-semibold mx-2'> mp3/wav </p> </div>
                     <div className='flex mx-2'>Duration:  <p className='font-semibold mx-2'> 54 sec </p> </div>
                     <div className='flex mx-2'>Bit rate:  <p className='font-semibold mx-2'> 24kb/sec </p> </div>
                     <div className='flex mx-2'>Resolution:  <p className='font-semibold mx-2'> 1920*1080 </p> </div>
                     </div>
-                    <div className='flex font-light my-1'>
+                    </div>
+                    <div className='flex flex-col lg:flex-row font-light my-1'>
                     <div className='flex mx-2'>Language:  <p className='font-semibold mx-2'> English </p> </div>
                     </div>
                 </div>
@@ -88,9 +90,8 @@ const Transcription = ({setselected,file,setfile}) => {
                 </div>
             }
         </div>
-        
         :
-        <div className='h-[60%] borderDash w-3/5'>
+        <div className='h-[60%] w-4/5 sm:w-3/5 border-white border-dashed rounded-3xl border-[1px]'>
         <div className='h-full w-full flex items-center justify-around  rounded-2xl '>
             <div className='h-2/3 flex flex-col items-center justify-around '>
             <p>File Uploaded !</p>
@@ -98,7 +99,7 @@ const Transcription = ({setselected,file,setfile}) => {
             <path d="M24.765 32.1525C24.3996 32.0009 23.9974 31.9611 23.6094 32.0381C23.2214 32.115 22.8649 32.3054 22.585 32.585L17.1725 38H12C11.4696 38 10.9609 38.2107 10.5858 38.5858C10.2107 38.9609 10 39.4696 10 40V50C10 50.5304 10.2107 51.0391 10.5858 51.4142C10.9609 51.7893 11.4696 52 12 52H17.1725L22.585 57.415C22.8647 57.695 23.2212 57.8858 23.6094 57.9631C23.9976 58.0404 24.3999 58.0007 24.7656 57.8492C25.1312 57.6977 25.4437 57.4412 25.6634 57.112C25.8832 56.7828 26.0003 56.3958 26 56V34C25.9999 33.6044 25.8825 33.2178 25.6627 32.8889C25.4429 32.5601 25.1305 32.3038 24.765 32.1525ZM22 51.1725L19.415 48.585C19.2291 48.3993 19.0085 48.2521 18.7657 48.1517C18.5229 48.0513 18.2627 47.9998 18 48H14V42H18C18.2627 42.0002 18.5229 41.9487 18.7657 41.8483C19.0085 41.7479 19.2291 41.6007 19.415 41.415L22 38.8275V51.1725ZM38 45C37.9979 46.764 37.5356 48.497 36.6587 50.0276C35.7818 51.5582 34.5207 52.8335 33 53.7275C32.5446 53.9542 32.0199 53.9989 31.5328 53.8525C31.0456 53.706 30.6325 53.3794 30.3777 52.9391C30.1228 52.4988 30.0453 51.978 30.1609 51.4826C30.2765 50.9872 30.5766 50.5545 31 50.2725C31.9169 49.7313 32.6768 48.9603 33.2047 48.0357C33.7326 47.111 34.0103 46.0647 34.0103 45C34.0103 43.9353 33.7326 42.889 33.2047 41.9643C32.6768 41.0397 31.9169 40.2687 31 39.7275C30.5766 39.4455 30.2765 39.0128 30.1609 38.5174C30.0453 38.022 30.1228 37.5012 30.3777 37.0609C30.6325 36.6206 31.0456 36.294 31.5328 36.1475C32.0199 36.0011 32.5446 36.0458 33 36.2725C34.5207 37.1665 35.7818 38.4418 36.6587 39.9724C37.5356 41.503 37.9979 43.236 38 45ZM53.415 20.585L39.415 6.585C39.2291 6.39933 39.0085 6.2521 38.7657 6.15173C38.5229 6.05135 38.2627 5.99979 38 6H14C12.9391 6 11.9217 6.42143 11.1716 7.17157C10.4214 7.92172 10 8.93913 10 10V30C10 30.5304 10.2107 31.0391 10.5858 31.4142C10.9609 31.7893 11.4696 32 12 32C12.5304 32 13.0391 31.7893 13.4142 31.4142C13.7893 31.0391 14 30.5304 14 30V10H36V22C36 22.5304 36.2107 23.0391 36.5858 23.4142C36.9609 23.7893 37.4696 24 38 24H50V54H42C41.4696 54 40.9609 54.2107 40.5858 54.5858C40.2107 54.9609 40 55.4696 40 56C40 56.5304 40.2107 57.0391 40.5858 57.4142C40.9609 57.7893 41.4696 58 42 58H50C51.0609 58 52.0783 57.5786 52.8284 56.8284C53.5786 56.0783 54 55.0609 54 54V22C54.0002 21.7373 53.9487 21.4771 53.8483 21.2343C53.7479 20.9915 53.6007 20.7709 53.415 20.585ZM40 12.8275L47.1725 20H40V12.8275Z" fill="#F4F4F4"/>
             </svg>
             <div className='flex flex-col items-center'>
-            <button onClick={()=>{settranscipted(true)}} className='flex px-12 xl:px-24 py-2 items-center rounded-3xl bg-[#a3db3c]'>
+            <button onClick={()=>{settranscipted(true)}} className='flex px-6 sm:px-12 xl:px-24 py-2 items-center rounded-3xl bg-[#a3db3c]'>
                 {/*Add gradient to button*/}
                 <p className='my-1 mx-1 text-black '>Generate Transcription </p>
                 <svg width="17" className='mx-1' height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">

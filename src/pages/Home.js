@@ -6,11 +6,10 @@ import{IoAddCircleOutline} from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 const Home = ({selected, setselected}) => {
   const navigate = useNavigate();
-  
   return (
-    <div className="text-white w-1/6 h-screen border-r-[1px] border-opacity-30 border-white bg-[#1e1e1e]">
-      <div className=' justify-around h-4/5 flex flex-col'>
-        <div className='flex justify-center px-3 py-2  items-center  '>
+    <div className="text-white w-full flex  h-[10%] sm:w-1/6 sm:h-screen sm:border-r-[1px] border-opacity-30 border-white bg-[#1e1e1e]">
+      <div className=' items-center sm:scale-100 scale-90 w-full  sm:items-start justify-around h-full sm:h-4/5 flex flex-row sm:flex-col'>
+        <div className='hidden sm:flex w-full justify-center px-3 py-2  items-center  '>
           <div className='scale-110 mx-2'>
         <svg width="29" height="46" viewBox="0 0 29 46" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_di_1_312)">
@@ -41,19 +40,19 @@ const Home = ({selected, setselected}) => {
 
         <p className='text-xl'>Decrackle</p>
         </div>
-        <button onClick={()=>{setselected(1);navigate("/")}} className={`flex px-3 py-2  border-l-4 items-center ${selected===1 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
+        <button onClick={()=>{setselected(1);navigate("/")}} className={` sm:flex hidden flex-col sm:flex-row px-3 py-2 border-b-4 border-l-0 sm:border-b-0 sm:border-l-4 items-center ${selected===1 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
         <IoAddCircleOutline className='mx-2' size={34}/>
         <p>Add New</p>
         </button>
-        <button onClick={()=>{setselected(2);navigate("/speech")}} className={`flex px-3 py-2  border-l-4 items-center ${selected===2 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
+        <button onClick={()=>{setselected(2);navigate("/speech")}} className={`flex scale-[90%] sm:scale-100 px-3 py-2 sm:py-2 flex-col sm:flex-row  border-b-4  border-l-0 sm:border-b-0 sm:border-l-4 items-center ${selected===2 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
         <LuWand2 className='mx-2' size={30}/>
-        <p>Speech Enhancement</p>
+        <p className='text-sm sm:text-base'>Speech Enhancement</p>
         </button>
-        <button onClick={()=>{setselected(3);navigate("/transcription")}} className={`flex px-3 py-2  border-l-4 items-center ${selected===3 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
+        <button onClick={()=>{setselected(3);navigate("/transcription")}} className={`flex scale-[90%] sm:scale-100 px-3 flex-col sm:flex-row  py-1 sm:py-2  border-b-4  border-l-0 sm:border-b-0 sm:border-l-4 items-center ${selected===3 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
         <CgTranscript  className='mx-2' size={33}/>
-        <p>Transcription</p>
+        <p className='text-sm sm:text-base'>Transcription</p>
         </button>
-        <button onClick={()=>{setselected(4);navigate("/music")}} className={`flex px-3 py-2  border-l-4 items-center ${selected===4 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
+        <button onClick={()=>{setselected(4);navigate("/music")}} className={`flex scale-[90%] sm:scale-100 px-3 py-1 sm:py-2 flex-col sm:flex-row   border-b-4  border-l-0 sm:border-b-0 sm:border-l-4 items-center ${selected===4 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
         <div className='scale-95 '>
         <svg width="44" height="51" viewBox="0 0 44 51" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path opacity="0.2" d="M40.8457 9.625V16.625H33.8457L40.8457 9.625Z" fill="#F4F4F4"/>
@@ -64,11 +63,11 @@ const Home = ({selected, setselected}) => {
         <path d="M16.3696 31.6968V35.4468C16.3696 35.5711 16.3202 35.6903 16.2323 35.7782C16.1444 35.8661 16.0252 35.9155 15.9009 35.9155C15.7766 35.9155 15.6573 35.8661 15.5694 35.7782C15.4815 35.6903 15.4321 35.5711 15.4321 35.4468V31.6968C15.4321 31.5725 15.4815 31.4532 15.5694 31.3653C15.6573 31.2774 15.7766 31.228 15.9009 31.228C16.0252 31.228 16.1444 31.2774 16.2323 31.3653C16.3202 31.4532 16.3696 31.5725 16.3696 31.6968ZM18.2446 27.478C18.1203 27.478 18.0011 27.5274 17.9132 27.6153C17.8253 27.7032 17.7759 27.8225 17.7759 27.9468V39.1968C17.7759 39.3211 17.8253 39.4403 17.9132 39.5282C18.0011 39.6161 18.1203 39.6655 18.2446 39.6655C18.3689 39.6655 18.4882 39.6161 18.5761 39.5282C18.664 39.4403 18.7134 39.3211 18.7134 39.1968V27.9468C18.7134 27.8225 18.664 27.7032 18.5761 27.6153C18.4882 27.5274 18.3689 27.478 18.2446 27.478ZM20.5884 29.353C20.4641 29.353 20.3448 29.4024 20.2569 29.4903C20.169 29.5782 20.1196 29.6975 20.1196 29.8218V37.3218C20.1196 37.4461 20.169 37.5653 20.2569 37.6532C20.3448 37.7411 20.4641 37.7905 20.5884 37.7905C20.7127 37.7905 20.8319 37.7411 20.9198 37.6532C21.0077 37.5653 21.0571 37.4461 21.0571 37.3218V29.8218C21.0571 29.6975 21.0077 29.5782 20.9198 29.4903C20.8319 29.4024 20.7127 29.353 20.5884 29.353ZM22.9321 31.228C22.8078 31.228 22.6886 31.2774 22.6007 31.3653C22.5128 31.4532 22.4634 31.5725 22.4634 31.6968V35.4468C22.4634 35.5711 22.5128 35.6903 22.6007 35.7782C22.6886 35.8661 22.8078 35.9155 22.9321 35.9155C23.0564 35.9155 23.1757 35.8661 23.2636 35.7782C23.3515 35.6903 23.4009 35.5711 23.4009 35.4468V31.6968C23.4009 31.5725 23.3515 31.4532 23.2636 31.3653C23.1757 31.2774 23.0564 31.228 22.9321 31.228ZM25.2759 30.2905C25.1516 30.2905 25.0323 30.3399 24.9444 30.4278C24.8565 30.5157 24.8071 30.635 24.8071 30.7593V36.3843C24.8071 36.5086 24.8565 36.6278 24.9444 36.7157C25.0323 36.8036 25.1516 36.853 25.2759 36.853C25.4002 36.853 25.5194 36.8036 25.6073 36.7157C25.6952 36.6278 25.7446 36.5086 25.7446 36.3843V30.7593C25.7446 30.635 25.6952 30.5157 25.6073 30.4278C25.5194 30.3399 25.4002 30.2905 25.2759 30.2905Z" fill="#F4F4F4"/>
         </svg>
         </div>
-        <p>Music Extraction</p>
+        <p className='text-sm sm:text-base'>Music Extraction</p>
         </button>
-        <button onClick={()=>{setselected(5);navigate("/folders")}} className={`flex px-3 py-2  border-l-4 items-center ${selected===5 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
+        <button onClick={()=>{setselected(5);navigate("/folders")}} className={`flex scale-[90%] sm:scale-100 px-3 py-1 sm:py-2  flex-col sm:flex-row  border-b-4  border-l-0 sm:border-b-0 sm:border-l-4 items-center ${selected===5 ? "text-[#baef57] transition ease-in-out delay-100  border-[#baef57]" : " border-[#1e1e1e]"}`} >
         <VscFolderOpened  className='mx-2' size={33}/>
-        <p>Folders</p>
+        <p className='text-sm sm:text-base'>Folders</p>
         </button>
       </div>
     </div>

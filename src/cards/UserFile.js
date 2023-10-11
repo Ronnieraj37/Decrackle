@@ -5,11 +5,11 @@ import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 const UserFile = ({file,i}) => {
   return (
-        <div className='bg-[#1e1e1e] w-full relative flex justify-around px-4 py-[14px] border-opacity-30 border-gray-300 border-[1px] '>
+        <div className='bg-[#1e1e1e] w-full relative flex justify-around px-4 py-[14px] border-opacity-30 border-gray-300 border-b-[2px] sm:border-[1px] '>
           <div className='flex w-[95%]  justify-around'>
-            <p className='text-lg'>{file}</p>
-            <p className='font-light' >File Type</p>
-            <div className='flex w-[300px]  font-light items-center'>
+            <p className='text-sm sm:text-lg'>{file}</p>
+            <p className='font-light text-sm sm:text-base' >File Type</p>
+            <div className='flex w-[150px] sm:w-[230px] font-light items-center'>
               {i%2 ===0 ? 
               <p className='mx-0.5 underline-offset-2 underline'>Transcription File</p>
               :
@@ -18,7 +18,7 @@ const UserFile = ({file,i}) => {
             <RiPlayCircleFill className='mx-0.5' size={28}/>
             <p className='mx-0.5 text-sm'>200 MB</p>
             </div>
-            <p className='font-light'>2023-09-26 06:25 PM</p>
+            <p className='font-light sm:flex hidden'>2023-09-26 06:25 PM</p>
           </div>
           <div className='w-[5%]'>
           <Menu as="div" className="relative inline-block text-left">

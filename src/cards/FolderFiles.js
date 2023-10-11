@@ -18,20 +18,22 @@ const FolderFiles = () => {
       <input placeholder='Search' className='w-full h-full bg-[#1e1e1e] py-4 px-12 rounded-lg ' type='text'/>
       </div>
       <button className='w-[10%] focus:dark:border-blue-200 items-center mx-2  justify-center flex bg-[#1e1e1e] rounded-lg border-[1px] border-neutral-300'>
-        <p className='mx-1'>Sort</p>
+        <p className='mx-1 sm:flex hidden'>Sort</p>
         <BsChevronDown className='mx-1' size={18}/>
       </button>
       </div>
       </div>
-      <div className='w-[90%] h-[90%] mt-6 flex flex-col '>
-      <div className='flex h-full flex-col relative justify-center items-center'>
-      <button onClick={()=>{navigate(-1)}} className='text-xl absolute left-2 top-2'>&larr; Back</button>
-      <p className='text-3xl absolute top-2'>Folder</p>
-      <div className='flex  fill-white absolute right-2 top-2'>
+      <div className='w-[90%] h-[90%] flex flex-col '>
+        <div className='h-[10%] flex items-center justify-between w-full'>
+          <button onClick={()=>{navigate(-1)}} className='text-xl'>&larr; Back</button>
+          <p className='text-2xl'>Folder</p>
+          <div className='flex  fill-white'>
         <IoMdAddCircleOutline className='mx-1.5' size={25}/>
         <MdOutlineDelete className='mx-1.5' size={25}/>
       </div>
-        <div className='flex w-full flex-col overflow-auto'>
+        </div>
+      <div className='flex h-[90%] flex-col relative justify-center items-center'>
+        <div className='flex w-full sm:rounded-none  border-opacity-30 border-gray-300 border-[1px] rounded-2xl flex-col overflow-auto'>
         {userFiles.map((userFile,i)=>{
           return(
             <UserFile file={userFile} i={i}/>
